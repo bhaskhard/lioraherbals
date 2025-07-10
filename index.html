@@ -24,569 +24,572 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet">
 
+  <!-- CSS file -->
+  <!-- <link rel="stylesheet" href="styles.css"> -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZIC9A_S6lz-u8QV0Mx7fvDLmkf_75m8g&libraries=places"></script>
 
   <style>
-   *,
-html,
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    *, html, body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body {
-    font-family: "Segoe UI", sans-serif;
-    background-color: #111;
-    color: #fff;
-}
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #fff;
+    }
 
-.main-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-}
+    .main-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+    }
 
-.slide-set {
-    flex: 1 1 33.33%;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.carousel-image {
-    width: 100%;
-    height: auto;
-    max-height: 300px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-carousel-image1 {
-    width: 100%;
-    height: 600px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.thumbnails {
-    margin-top: 10px;
-    display: flex;
-    gap: 5px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.thumbnails img {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 5px;
-    cursor: pointer;
-    border: 2px solid transparent;
-}
-
-.thumbnails img.active {
-    border-color: #00f0ff;
-}
-
-.description {
-    margin-top: 10px;
-    font-size: 1.2rem;
-    text-align: center;
-    color: #ccc;
-}
-
-@media (max-width: 768px) {
     .slide-set {
-        flex: 1 1 100%;
+      flex: 1 1 33.33%;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .carousel-image {
-        max-height: 200px;
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
     }
-    .carousel-image1 {
-        max-height: 500px;
+	carousel-image1 {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .thumbnails {
+      margin-top: 10px;
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .thumbnails img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 5px;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+
+    .thumbnails img.active {
+      border-color: #00f0ff;
+    }
+
+    .description {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      text-align: center;
+      color: #ccc;
+    }
+
+    @media (max-width: 768px) {
+      .slide-set {
+        flex: 1 1 100%;
+      }
+
+      .carousel-image {
+        max-height: 200px;
+      }
+	  .carousel-image1 {
+        max-height: 500px;
+      }
+
+      .thumbnails img {
         width: 50px;
         height: 50px;
+      }
     }
-}
 
 .site-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #000;
-    padding: 10px 20px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  padding: 10px 20px;
+  flex-wrap: wrap;
 }
 
 .logo img {
-    height: 40px;
+  height: 40px;
 }
 
 .nav-menu {
-    display: flex;
-    gap: 15px;
+  display: flex;
+  gap: 15px;
 }
 
 .nav-menu a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 6px 10px;
-    transition: background 0.3s;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 6px 10px;
+  transition: background 0.3s;
 }
+
 
 .nav-menu a:hover {
-    background-color: #333;
-    border-radius: 4px;
+  background-color: #333;
+  border-radius: 4px;
 }
 
+/* Mobile menu */
 .menu-toggle {
-    display: none;
-    font-size: 28px;
-    color: #fff;
-    cursor: pointer;
+  display: none;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
-    .nav-menu {
-        width: 100%;
-        flex-direction: column;
-        display: none;
-    }
+  .nav-menu {
+    width: 100%;
+    flex-direction: column;
+    display: none;
+  }
 
-    .nav-menu.active {
-        display: flex;
-        margin-top: 10px;
-    }
+  .nav-menu.active {
+    display: flex;
+    margin-top: 10px;
+  }
 
-    .menu-toggle {
-        display: block;
-    }
+  .menu-toggle {
+    display: block;
+  }
 }
 
+
 .site-footer {
-    background-color: #111;
-    color: #ccc;
-    padding: 20px;
-    text-align: center;
-    border-top: 1px solid #333;
+  background-color: #111; 
+  color: #ccc;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #333;
 }
 
 .footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
 }
 
 .footer-links a {
-    color: #ccc;
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: color 0.3s ease;
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-    color: #00f0ff;
+  color: #00f0ff;
 }
 
 .footer-copy {
-    font-size: 0.8rem;
-    color: #888;
+  font-size: 0.8rem;
+  color: #888;
 }
 
 @media (min-width: 768px) {
-    .footer-links {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+  .footer-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-    .footer-links a {
-        margin: 0 12px;
-    }
+  .footer-links a {
+    margin: 0 12px;
+  }
 }
 .description h3 {
-    font-size: 20px;
-    font-weight: bold;
-    color: #2a7f62;
-    margin-top: 10px;
-    margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #2a7f62; /* Herbal tone */
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 .description a {
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: #4caf50;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #4caf50; /* Fresh green for herbal vibe */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
 }
 
 .description a:hover {
-    background-color: #388e3c;
+  background-color: #388e3c; 
 }
 .testimonials {
-    padding: 40px 20px;
-    background-color: #f9f6f2;
-    font-family: "Segoe UI", sans-serif;
-    color: #333;
-    text-align: center;
+  padding: 40px 20px;
+  background-color: #f9f6f2;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  text-align: center;
 }
 
 .testimonials h2 {
-    font-size: 28px;
-    margin-bottom: 30px;
-    color: #875936;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #875936;
 }
 
 .testimonial-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .testimonial-card {
-    background-color: #fff;
-    border: 1px solid #e0d8ce;
-    border-radius: 10px;
-    padding: 20px;
-    max-width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
+  background-color: #fff;
+  border: 1px solid #e0d8ce;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
 }
 
 .testimonial-card:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .how-to-use {
-    padding: 40px 20px;
-    background-color: #f4eee7;
-    color: #333;
-    text-align: center;
+  padding: 40px 20px;
+  background-color: #f4eee7;
+  color: #333;
+  text-align: center;
 }
 
 .how-to-use h2 {
-    font-size: 28px;
-    margin-bottom: 30px;
-    color: #875936;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #875936;
 }
 
 .use-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .use-card {
-    background-color: #fff;
-    border: 1px solid #e3dacb;
-    border-radius: 10px;
-    padding: 20px;
-    max-width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
-    text-align: left;
+  background-color: #fff;
+  border: 1px solid #e3dacb;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  text-align: left;
 }
 
 .use-card:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .use-card h3 {
-    color: #875936;
-    font-size: 22px;
-    margin-bottom: 15px;
+  color: #875936;
+  font-size: 22px;
+  margin-bottom: 15px;
 }
 
 .use-card ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    line-height: 1.6;
+  list-style-type: disc;
+  padding-left: 20px;
+  line-height: 1.6;
 }
 
 .contact-us {
-    background: #f0f0f0;
-    width: 100%;
+  background: #f0f0f0;
+  width: 100%;
 }
 
 .contact-us form {
-    max-width: 600px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px;
-    background-color: #000;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  background-color: #000;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .contact-us input,
 .contact-us textarea {
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 16px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
 }
 
 .contact-us button {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
 .contact-us button:hover {
-    background-color: #218838;
+  background-color: #218838;
 }
 .contact-us h2 {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 30px;
-    color: #875936;
+text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #875936;
 }
 .policy-section {
-    padding: 40px 20px;
-    background-color: #f4eee7;
-    color: #333;
-    max-width: 800px;
-    margin: auto;
-    text-align: left;
-    line-height: 1.6;
+  padding: 40px 20px;
+  background-color: #f4eee7;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  max-width: 800px;
+  margin: auto;
+  text-align: left;
+  line-height: 1.6;
 }
 
 .policy-section h2 {
-    font-size: 26px;
-    color: #875936;
-    margin-top: 30px;
-    margin-bottom: 10px;
+  font-size: 26px;
+  color: #875936;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .policy-section p {
-    font-size: 16px;
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #e3dacb;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  font-size: 16px;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #e3dacb;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 .about-us {
-    background-color: #f4eee7;
-    padding: 40px 25px;
-    color: #333;
-    max-width: 800px;
-    margin: auto;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
-    text-align: left;
+  background-color: #f4eee7;
+  padding: 40px 25px;
+  color: #333;
+  max-width: 800px;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+  text-align: left;
 }
 
 .about-us h2 {
-    font-size: 32px;
-    color: #875936;
-    margin-bottom: 25px;
-    text-align: center;
+  font-size: 32px;
+  color: #875936;
+  margin-bottom: 25px;
+  text-align: center;
 }
 
 .about-us p {
-    font-size: 17px;
-    line-height: 1.8;
-    margin-bottom: 18px;
-    background-color: #fff;
-    padding: 15px 20px;
-    border-left: 5px solid #875936;
-    border-radius: 8px;
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+  background-color: #fff;
+  padding: 15px 20px;
+  border-left: 5px solid #875936;
+  border-radius: 8px;
 }
 .description {
-    background-color: #f4eee7;
-    padding: 30px;
-    border-radius: 10px;
-    max-width: 500px;
-    margin: auto;
-    color: #333;
+  background-color: #f4eee7;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: auto;
+  color: #333;
 }
 
 .description h2 {
-    color: #875936;
+  color: #875936;
 }
 
 .description h3 {
-    color: #2a7f62;
-    margin-bottom: 10px;
+  color: #2a7f62;
+  margin-bottom: 10px;
 }
 
 .description p {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .description label {
-    display: block;
-    margin-top: 10px;
-    font-weight: 600;
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
 }
 
-.description select,
+.description select, 
 .description input {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
 
 .description button {
-    margin-top: 20px;
-    background-color: #875936;
-    color: #fff;
-    padding: 10px 16px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 16px;
+  margin-top: 20px;
+  background-color: #875936;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 .description button:hover {
-    background-color: #6b4329;
+  background-color: #6b4329;
 }
 .modal-overlay {
-    display: none;
-    position: fixed;
-    z-index: 999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    justify-content: center;
-    align-items: center;
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-content {
-    background-color: #f4eee7;
-    padding: 30px;
-    border-radius: 12px;
-    width: 90%;
-    max-width: 400px;
-    text-align: center;
-    color: #333;
-    font-family: "Segoe UI", sans-serif;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    position: relative;
+  background-color: #f4eee7;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  position: relative;
 }
 
 .modal-content h2 {
-    color: #875936;
-    margin-bottom: 20px;
+  color: #875936;
+  margin-bottom: 20px;
 }
 
 .modal-content label {
-    display: block;
-    margin-top: 15px;
-    font-weight: 600;
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
 }
 
 .modal-content select,
 .modal-content input {
-    width: 100%;
-    padding: 10px;
-    margin-top: 6px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
 
 .modal-content button {
-    margin-top: 20px;
-    background-color: #875936;
-    color: #fff;
-    padding: 10px 16px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 16px;
+  margin-top: 20px;
+  background-color: #875936;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 .modal-content button:hover {
-    background-color: #6b4329;
+  background-color: #6b4329;
 }
 
 .close-btn {
-    position: absolute;
-    top: 12px;
-    right: 18px;
-    font-size: 24px;
-    cursor: pointer;
-    color: #333;
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
 }
 .modal-content select#qty1 {
-    width: 100px;
-    display: inline-block;
-    margin-top: 6px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    padding: 8px;
+  width: 100px; /* You can reduce this further if needed */
+  display: inline-block;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px;
 }
 .modal-content textarea#address1 {
-    width: 100%;
-    padding: 10px;
-    margin-top: 6px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    resize: vertical;
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: vertical;
 }
 .modal-content select#qty2 {
-    width: 100px;
-    display: inline-block;
-    margin-top: 6px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    padding: 8px;
+  width: 100px; /* You can reduce this further if needed */
+  display: inline-block;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px;
 }
 .modal-content textarea#address2 {
-    width: 100%;
-    padding: 10px;
-    margin-top: 6px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    resize: vertical;
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: vertical;
 }
 .modal-content select#qty3 {
-    width: 100px;
-    display: inline-block;
-    margin-top: 6px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    padding: 8px;
+  width: 100px; /* You can reduce this further if needed */
+  display: inline-block;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px;
 }
 .modal-content textarea#address3 {
-    width: 100%;
-    padding: 10px;
-    margin-top: 6px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    resize: vertical;
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: vertical;
 }
-
   </style>
 </head>
 <body>
+<!-- Header with Logo and Menu -->
 <header class="site-header">
   <div class="logo">
+    <!-- <img src="https://placehold.co/120x40/000/fff?text=Liora" alt="Liora"> -->
 	<img src="logo.png" alt="Liora">
   </div>
   <nav class="nav-menu" id="navMenu">
@@ -599,219 +602,268 @@ carousel-image1 {
   <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">☰</div>
 </header>
 
+<!-- Slide Set 4 -->
   <div class="slide-set" id="set3">
+    <!-- <img class="carousel-image" src="https://placehold.co/600x400/444/fff?text=Liora" alt="Slide 4" id="img3" /> -->
 	<img class="carousel-image" src="banner3000x1000.png" alt="Slide 4" id="img3" />
-    <div class="thumbnails">      
+    <div class="thumbnails">
+      <!-- <img src="https://placehold.co/100x100/444/fff?text=4A" onclick="changeImage(3, 'https://placehold.co/600x400/444/fff?text=Slide+4A')" />
+      <img src="https://placehold.co/100x100/444/fff?text=4B" onclick="changeImage(3, 'https://placehold.co/600x400/444/fff?text=Slide+4B')" /> -->
 	  <img src="banner.png" onclick="changeImage(3, 'banner3000x1000.png')" />
 	  <img src="banner-2.png" onclick="changeImage(3, 'banner-2-3000x1000.png')" />
     </div>
+    <!-- <div class="description" id="desc3"><h1>LIORA HERBALS</h1>At Liora Herbals, we believe beauty begins with purity. Our products are lovingly crafted with nature’s finest ingredients—no chemicals, no compromise. Inspired by traditional remedies and modern self-care rituals, we offer plant-powered solutions that nurture your skin and hair without harsh additives.<br/>Whether it’s our nourishing hair oil, hydrating lip balm, or radiant lipstick, each item is infused with natural extracts and soothing botanicals. Every formula is designed to be gentle, effective, and emotionally uplifting—because we believe beauty should feel as good as it looks.<br/>Rooted in care, blossoming with integrity—Liora Herbals is where nature embraces you</div> -->
   </div>
 <div class="main-wrapper">
-    <div class="slide-set" id="set0">
-        <img class="carousel-image" src="hairoil1.jpg" alt="Hair Oil" id="img0" />
-        <div class="thumbnails">
-            <img src="hairoil1.jpg" onclick="changeImage(0, 'hairoil1.jpg')" />
-            <img src="hairoil2.jpg" onclick="changeImage(0, 'hairoil2.jpg')" />
-            <img src="hairoil3.jpg" onclick="changeImage(0, 'hairoil3.jpg')" />
-            <img src="hairoil4.jpg" onclick="changeImage(0, 'hairoil4.jpg')" />
-        </div>
-        <div class="description" id="desc0">
-            <h2>HAIR OIL</h2>
-            <p>Revitalize your hair with this nourishing natural oil—strengthens roots, reduces dryness, and adds radiant shine with every drop.</p>
-            <h3>INR 300</h3>
-            <button onclick="openModal1()">Buy via WhatsApp</button>
-        </div>
-        <div id="whatsappModal1" class="modal-overlay">
-            <div class="modal-content">
-                <span class="close-btn" onclick="closeModal1()">&times;</span>
-                <h2>Enter Details</h2>
-                <label for="qty1" width="20">Quantity:</label>
-                <select id="qty1">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                </select>
-                <label for="address1">Address:</label>
-                <textarea id="address1" placeholder="Enter full delivery address including landmark" rows="4" required></textarea>
-                <button onclick="sendProductDetails1()">Send</button>
-            </div>
-        </div>
-    </div>
 
-    <div class="slide-set" id="set1">
-        <img class="carousel-image" src="lipstick1.jpg" alt="Lip Stick" id="img1" />
-        <div class="thumbnails">
-            <img src="lipstick1.jpg" onclick="changeImage(1, 'lipstick1.jpg')" />
-            <img src="lipstick2.jpg" onclick="changeImage(1, 'lipstick2.jpg')" />
-            <img src="lipstick3.jpg" onclick="changeImage(1, 'lipstick3.jpg')" />
-            <img src="lipstick4.jpg" onclick="changeImage(1, 'lipstick4.jpg')" />
-        </div>
-        <div class="description" id="desc1">
-            <h2>LIP STICK</h2>
-            <p>Enhance your lips with natural elegance—this lipstick hydrates, protects, and delivers rich color using herbal extracts for a soft, radiant look.</p>
-            <h3>INR 300</h3>
-            <button onclick="openModal2()">Buy via WhatsApp</button>
-        </div>
-        <div id="whatsappModal2" class="modal-overlay">
-            <div class="modal-content">
-                <span class="close-btn" onclick="closeModal2()">&times;</span>
-                <h2>Enter Details</h2>
-                <label for="qty2" width="20">Quantity:</label>
-                <select id="qty2">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                </select>
-                <label for="address2">Address:</label>
-                <textarea id="address2" placeholder="Enter full delivery address including landmark" rows="4" required></textarea>
-                <button onclick="sendProductDetails2()">Send</button>
-            </div>
-        </div>
+  <!-- Slide Set 1 -->
+  <div class="slide-set" id="set0">
+    <img class="carousel-image" src="hairoil1.jpg" alt="Hair Oil" id="img0" />
+    <div class="thumbnails">
+      <!-- <img src="https://placehold.co/100x100/222/fff?text=1A" onclick="changeImage(0, 'https://placehold.co/600x300/222/fff?text=Slide+1A')" />
+      <img src="https://placehold.co/100x100/222/fff?text=1B" onclick="changeImage(0, 'https://placehold.co/600x300/222/fff?text=Slide+1B')" />
+	  <img src="https://placehold.co/100x100/222/fff?text=1C" onclick="changeImage(0, 'https://placehold.co/600x300/222/fff?text=Slide+1C')" />
+	  <img src="https://placehold.co/100x100/222/fff?text=1D" onclick="changeImage(0, 'https://placehold.co/600x300/222/fff?text=Slide+1D')" /> -->
+	  <img src="hairoil1.jpg" onclick="changeImage(0, 'hairoil1.jpg')" />
+      <img src="hairoil2.jpg" onclick="changeImage(0, 'hairoil2.jpg')" />
+	  <img src="hairoil3.jpg" onclick="changeImage(0, 'hairoil3.jpg')" />
+	  <img src="hairoil4.jpg" onclick="changeImage(0, 'hairoil4.jpg')" />
     </div>
-
-    <div class="slide-set" id="set2">
-        <img class="carousel-image" src="lipbalm1.jpg" alt="Lip Balm" id="img2" />
-        <div class="thumbnails">
-            <img src="lipbalm1.jpg" onclick="changeImage(2, 'lipbalm1.jpg')" />
-            <img src="lipbalm2.jpg" onclick="changeImage(2, 'lipbalm2.jpg')" />
-            <img src="lipbalm3.jpg" onclick="changeImage(2, 'lipbalm3.jpg')" />
-            <img src="lipbalm4.jpg" onclick="changeImage(2, 'lipbalm4.jpg')" />
-        </div>
-        <div class="description" id="desc2">
-            <h2>LIP BALM</h2>
-            <p>Soothe and protect your lips with this herbal lip balm—infused with natural oils to hydrate, heal cracks, and leave a soft, glossy finish.</p>
-            <h3>INR 300</h3>
-            <button onclick="openModal3()">Buy via WhatsApp</button>
-        </div>
-        <div id="whatsappModal3" class="modal-overlay">
-            <div class="modal-content">
-                <span class="close-btn" onclick="closeModal3()">&times;</span>
-                <h2>Enter Details</h2>
-                <label for="qty3" width="20">Quantity:</label>
-                <select id="qty3">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                </select>
-                <label for="address3">Address:</label>
-                <textarea id="address3" placeholder="Enter full delivery address including landmark" rows="4" required></textarea>
-                <button onclick="sendProductDetails3()">Send</button>
-            </div>
-        </div>
-    </div>
+    <!-- <div class="description" id="desc0"><h2>HAIR OIL</h2>Revitalize your hair with this nourishing natural oil—strengthens roots, reduces dryness, and adds radiant shine with every drop.<h3>INR 300</h3><a href="/">Buy Now</a></div> -->
+	<!-- Product Card -->
+<div class="description" id="desc0">
+  <h2>HAIR OIL</h2>
+  <p>Revitalize your hair with this nourishing natural oil—strengthens roots, reduces dryness, and adds radiant shine with every drop.</p>
+  <h3>INR 300</h3>
+  <button onclick="openModal1()">Buy via WhatsApp</button>
 </div>
-<br/>
-<section class="about-us" id="about">
-    <h2>About Liora Herbals</h2>
-    <p>At <strong>Liora Herbals</strong>, we believe beauty begins with purity. Our products are lovingly crafted with nature’s finest ingredients—no chemicals, no compromise.</p>
-    <p>
-        Inspired by traditional remedies and modern self-care rituals, we offer plant-powered solutions that nurture your skin and hair with botanical goodness.
-    </p>
-    <p>
-        From our nourishing <em>hair oil</em> to our hydrating <em>lip balm</em> and radiant <em>lipstick</em>, every item carries the essence of natural care. Gentle, effective, and emotionally uplifting—beauty that feels as good as it
-        looks.
-    </p>
-    <p>Rooted in care, blossoming with integrity—<strong>Liora Herbals is where nature embraces you</strong>.</p>
-</section>
-<br />
-<section class="testimonials" id="testimo">
-    <h2>What Our Customers Say</h2>
-    <div class="testimonial-row">
-        <div class="testimonial-card">
-            <p>“I've tried dozens of lip balms, but this herbal one truly stands out. My lips have never felt smoother!”</p>
-            <h4>— Priya S., Mumbai</h4>
-        </div>
-        <div class="testimonial-card">
-            <p>“The natural oil is magic for my hair! It’s shinier, softer, and smells divine.”</p>
-            <h4>— Kavita R., Hyderabad</h4>
-        </div>
-        <div class="testimonial-card">
-            <p>“That herbal lipstick? Wow. Bold color and no dryness. I’m obsessed!”</p>
-            <h4>— Roshni T., Bengaluru</h4>
-        </div>
-        <div class="testimonial-card">
-            <p>“A must-have for self-care. The lip balm healed my cracks and added a gentle gloss.”</p>
-            <h4>— Ananya D., Pune</h4>
-        </div>
+
+<!-- Modal Overlay -->
+<div id="whatsappModal1" class="modal-overlay">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal1()">&times;</span>
+    <h2>Enter Details</h2>
+
+    <label for="qty1" width="20">Quantity:</label>
+    <select id="qty1">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+
+    <label for="address1">Address:</label>
+     <textarea id="address1" placeholder="Enter full delivery address including landmark" rows="4" required></textarea>
+
+    <button onclick="sendProductDetails1()">Send</button>
+  </div>
+</div>
+
+
+</div>
+
+  <!-- Slide Set 2 -->
+  <div class="slide-set" id="set1">
+    <img class="carousel-image" src="lipstick1.jpg" alt="Lip Stick" id="img1" />
+    <div class="thumbnails">
+      <!-- <img src="https://placehold.co/100x100/222/fff?text=2A" onclick="changeImage(1, 'https://placehold.co/600x300/222/fff?text=Slide+2A')" />
+      <img src="https://placehold.co/100x100/222/fff?text=2B" onclick="changeImage(1, 'https://placehold.co/600x300/222/fff?text=Slide+2B')" />
+	  <img src="https://placehold.co/100x100/222/fff?text=2C" onclick="changeImage(1, 'https://placehold.co/600x300/222/fff?text=Slide+2C')" />
+	  <img src="https://placehold.co/100x100/222/fff?text=2D" onclick="changeImage(1, 'https://placehold.co/600x300/222/fff?text=Slide+2D')" /> -->
+	<!--   Create vector image of indian female having makeup with lipstick colors (beetroot, vanilla, chacolate) with background color #89593A, size 600x300 (heightxwidth) -->
+	  <img src="lipstick1.jpg" onclick="changeImage(1, 'lipstick1.jpg')" />
+      <img src="lipstick2.jpg" onclick="changeImage(1, 'lipstick2.jpg')" />
+	  <img src="lipstick3.jpg" onclick="changeImage(1, 'lipstick3.jpg')" />
+	  <img src="lipstick4.jpg" onclick="changeImage(1, 'lipstick4.jpg')" />
     </div>
+    <!-- <div class="description" id="desc1"><h2>LIP STICK</h2>Enhance your lips with natural elegance—this lipstick hydrates, protects, and delivers rich color using herbal extracts for a soft, radiant look.<h3>INR 300</h3><a href="/">Buy Now</a></div> -->
+	<div class="description" id="desc1">
+  <h2>LIP STICK</h2>
+  <p>Enhance your lips with natural elegance—this lipstick hydrates, protects, and delivers rich color using herbal extracts for a soft, radiant look.</p>
+  <h3>INR 300</h3>
+  <button onclick="openModal2()">Buy via WhatsApp</button>
+</div>
+
+<!-- Modal Overlay -->
+<div id="whatsappModal2" class="modal-overlay">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal2()">&times;</span>
+    <h2>Enter Details</h2>
+
+    <label for="qty2" width="20">Quantity:</label>
+    <select id="qty2">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+
+    <label for="address2">Address:</label>
+     <textarea id="address2" placeholder="Enter full delivery address including landmark" rows="4" required></textarea>
+
+    <button onclick="sendProductDetails2()">Send</button>
+  </div>
+</div>
+
+  </div>
+
+  <!-- Slide Set 3 -->
+  <div class="slide-set" id="set2">
+    <img class="carousel-image" src="lipbalm1.jpg" alt="Lip Balm" id="img2" />
+    <div class="thumbnails">
+      <!-- <img src="https://placehold.co/100x100/333/fff?text=3A" onclick="changeImage(2, 'https://placehold.co/600x300/333/fff?text=Slide+3A')" />
+      <img src="https://placehold.co/100x100/333/fff?text=3B" onclick="changeImage(2, 'https://placehold.co/600x300/333/fff?text=Slide+3B')" />
+	  <img src="https://placehold.co/100x100/333/fff?text=3C" onclick="changeImage(2, 'https://placehold.co/600x300/333/fff?text=Slide+3C')" />
+	  <img src="https://placehold.co/100x100/333/fff?text=3D" onclick="changeImage(2, 'https://placehold.co/600x300/333/fff?text=Slide+3D')" /> -->
+	 <!--  Create vector image of indian female having makeup with lipbalm(rounded small box), colors (beetroot, vanilla, chacolate) with background color #89593A, size 600x300 (heightxwidth) -->
+	 <img src="lipbalm1.jpg" onclick="changeImage(2, 'lipbalm1.jpg')" />
+      <img src="lipbalm2.jpg" onclick="changeImage(2, 'lipbalm2.jpg')" />
+	  <img src="lipbalm3.jpg" onclick="changeImage(2, 'lipbalm3.jpg')" />
+	  <img src="lipbalm4.jpg" onclick="changeImage(2, 'lipbalm4.jpg')" />
+    </div>
+    <!-- <div class="description" id="desc2"><h2>LIP BALM</h2>Soothe and protect your lips with this herbal lip balm—infused with natural oils to hydrate, heal cracks, and leave a soft, glossy finish.<h3>INR 300</h3><a href="/">Buy Now</a></div> -->
+		<div class="description" id="desc2">
+  <h2>LIP BALM</h2>
+  <p>Soothe and protect your lips with this herbal lip balm—infused with natural oils to hydrate, heal cracks, and leave a soft, glossy finish.</p>
+  <h3>INR 300</h3>
+  <button onclick="openModal3()">Buy via WhatsApp</button>
+</div>
+
+<!-- Modal Overlay -->
+<div id="whatsappModal3" class="modal-overlay">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal3()">&times;</span>
+    <h2>Enter Details</h2>
+
+    <label for="qty3" width="20">Quantity:</label>
+    <select id="qty3">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+
+    <label for="address3">Address:</label>
+     <textarea id="address3" placeholder="Enter full delivery address including landmark" rows="4" required></textarea>
+
+    <button onclick="sendProductDetails3()">Send</button>
+  </div>
+</div>
+
+  </div>
+</div><br/>
+<section class="about-us" id="about">
+  <h2>About Liora Herbals</h2>
+  <p>
+    At <strong>Liora Herbals</strong>, we believe beauty begins with purity. Our products are lovingly crafted with nature’s finest ingredients—no chemicals, no compromise.
+  </p>
+  <p>
+    Inspired by traditional remedies and modern self-care rituals, we offer plant-powered solutions that nurture your skin and hair with botanical goodness.
+  </p>
+  <p>
+    From our nourishing <em>hair oil</em> to our hydrating <em>lip balm</em> and radiant <em>lipstick</em>, every item carries the essence of natural care. Gentle, effective, and emotionally uplifting—beauty that feels as good as it looks.
+  </p>
+  <p>
+    Rooted in care, blossoming with integrity—<strong>Liora Herbals is where nature embraces you</strong>.
+  </p>
+</section><br/>
+<section class="testimonials" id="testimo">
+  <h2>What Our Customers Say</h2>
+  <div class="testimonial-row">
+    <div class="testimonial-card">
+      <p>“I've tried dozens of lip balms, but this herbal one truly stands out. My lips have never felt smoother!”</p>
+      <h4>— Priya S., Mumbai</h4>
+    </div>
+    <div class="testimonial-card">
+      <p>“The natural oil is magic for my hair! It’s shinier, softer, and smells divine.”</p>
+      <h4>— Kavita R., Hyderabad</h4>
+    </div>
+    <div class="testimonial-card">
+      <p>“That herbal lipstick? Wow. Bold color and no dryness. I’m obsessed!”</p>
+      <h4>— Roshni T., Bengaluru</h4>
+    </div>
+    <div class="testimonial-card">
+      <p>“A must-have for self-care. The lip balm healed my cracks and added a gentle gloss.”</p>
+      <h4>— Ananya D., Pune</h4>
+    </div>
+  </div>
 </section>
 <section class="how-to-use" id="howto">
-    <h2>How to Use</h2>
-    <div class="use-row">
-        <div class="use-card">
-            <h3>Hair Oil</h3>
-            <ul>
-                <li>Warm a few drops in your palms.</li>
-                <li>Massage gently into scalp and roots.</li>
-                <li>Leave overnight or at least 30 minutes before rinsing.</li>
-                <li>Use 2–3 times a week for best results.</li>
-            </ul>
-        </div>
-        <div class="use-card">
-            <h3>Lipstick</h3>
-            <ul>
-                <li>Start with clean, moisturized lips.</li>
-                <li>Apply directly or use a brush for precision.</li>
-                <li>Blot lightly and layer for deeper color.</li>
-                <li>Reapply after meals or as desired.</li>
-            </ul>
-        </div>
-        <div class="use-card">
-            <h3>Lip Balm</h3>
-            <ul>
-                <li>Apply a thin layer on dry or cracked lips.</li>
-                <li>Reapply throughout the day as needed.</li>
-                <li>Use before bedtime for overnight healing.</li>
-                <li>Can be used as a base before applying lipstick.</li>
-            </ul>
-        </div>
+  <h2>How to Use</h2>
+  <div class="use-row">
+    <div class="use-card">
+      <h3>Hair Oil</h3>
+      <ul>
+        <li>Warm a few drops in your palms.</li>
+        <li>Massage gently into scalp and roots.</li>
+        <li>Leave overnight or at least 30 minutes before rinsing.</li>
+        <li>Use 2–3 times a week for best results.</li>
+      </ul>
     </div>
+    <div class="use-card">
+      <h3>Lipstick</h3>
+      <ul>
+        <li>Start with clean, moisturized lips.</li>
+        <li>Apply directly or use a brush for precision.</li>
+        <li>Blot lightly and layer for deeper color.</li>
+        <li>Reapply after meals or as desired.</li>
+      </ul>
+    </div>
+    <div class="use-card">
+      <h3>Lip Balm</h3>
+      <ul>
+        <li>Apply a thin layer on dry or cracked lips.</li>
+        <li>Reapply throughout the day as needed.</li>
+        <li>Use before bedtime for overnight healing.</li>
+        <li>Can be used as a base before applying lipstick.</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
-<section class="contact-us" id="contact">
-    <h2>Contact Us</h2>
-    <form id="contactForm" onsubmit="sendToWhatsApp(); return false;">
-        <label for="name">Name:</label>
-        <input type="text" id="name" pattern="[A-Za-z. ]+" maxlength="25" title="Only letters and dot (.) allowed" required />
+<section class="contact-us"  id="contact">
+  <h2>Contact Us</h2>
+  <form id="contactForm" onsubmit="sendToWhatsApp(); return false;">
+    <label for="name">Name:</label>
+    <input type="text" id="name" pattern="[A-Za-z. ]+" maxlength="25" title="Only letters and dot (.) allowed" required>
 
-        <label for="phone">Phone:</label>
-        <input type="text" id="phone" pattern="\d+" maxlength="10" title="Only numbers allowed" required />
 
-        <label for="info">Your Message:</label>
-        <textarea id="info" maxlength="150" required></textarea>
+    <label for="phone">Phone:</label>
+    <input type="text" id="phone" pattern="\d+"  maxlength="10" title="Only numbers allowed" required>
 
-        <button type="submit">Send via WhatsApp</button>
-    </form>
+    <label for="info">Your Message:</label>
+    <textarea id="info" maxlength="150" required></textarea>
+
+    <button type="submit">Send via WhatsApp</button>
+  </form>
 </section>
+
+
 
 <section class="policy-section">
-    <h2 id="privacy">Privacy Policy</h2>
-    <p>
-        We value your privacy. Any personal information you share with us — such as name, phone, or preferences — is securely stored and used only to enhance your experience. We do not sell or share your data with third parties. By using
-        our services, you consent to this policy.
-    </p>
+  <h2 id="privacy">Privacy Policy</h2>
+  <p>
+    We value your privacy. Any personal information you share with us — such as name, phone, or preferences — is securely stored and used only to enhance your experience. We do not sell or share your data with third parties. By using our services, you consent to this policy.
+  </p>
 
-    <h2 id="terms">Terms & Conditions</h2>
-    <p>
-        All product visuals, descriptions, and prices are subject to change without notice. Herbal products are for external use only — please check ingredients before use. By browsing or purchasing from our site, you agree to abide by
-        these terms.
-    </p>
+  <h2 id="terms">Terms & Conditions</h2>
+  <p>
+    All product visuals, descriptions, and prices are subject to change without notice. Herbal products are for external use only — please check ingredients before use. By browsing or purchasing from our site, you agree to abide by these terms.
+  </p>
 </section>
 
 <footer class="site-footer">
-    <div class="footer-links">
-        <a href="/">Products</a>
-        <a href="#about">About Us</a>
-        <a href="#testimo">Testimonials</a>
-        <a href="#howto">How to Use</a>
-        <a href="#contact">Contact</a>
-        <a href="#privacy">Privacy Policy</a>
-        <a href="#terms">Terms & Conditions</a>
-    </div>
-    <div class="footer-copy">
-        © 2025 Liora Herbals. All rights reserved.
-    </div>
+  <div class="footer-links">
+    <a href="/">Products</a>
+	<a href="#about">About Us</a>
+    <a href="#testimo">Testimonials</a>
+    <a href="#howto">How to Use</a>
+    <a href="#contact">Contact</a>
+    <a href="#privacy">Privacy Policy</a>
+    <a href="#terms">Terms & Conditions</a>
+  </div>
+  <div class="footer-copy">
+    © 2025 Liora Herbals. All rights reserved.
+  </div>
 </footer>
+
 <script>
   function changeImage(setIndex, newSrc) {
     document.getElementById('img' + setIndex).src = newSrc;
@@ -937,30 +989,5 @@ function sendProductDetails3() {
   closeModal3();
 }
 </script>
-<script>
-  const imageList3 = [
-    'banner3000x1000.png',
-    'banner-2-3000x1000.png'
-  ];
-  let currentIndex3 = 0;
-
-  function updateSlide3() {
-    const imgElement = document.getElementById('img3');
-    currentIndex3 = (currentIndex3 + 1) % imageList3.length;
-    imgElement.src = imageList3[currentIndex3];
-  }
-
-  // Start interval for set3
-  setInterval(updateSlide3, 4000); // 4000ms = 4 seconds
-
-  // Manual change from thumbnails
-  function changeImage(setId, src) {
-    if (setId === 3) {
-      document.getElementById('img3').src = src;
-      currentIndex3 = imageList3.indexOf(src);
-    }
-  }
-</script>
-
 </body>
 </html>
