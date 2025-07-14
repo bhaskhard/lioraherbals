@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- 875936 -->
+<!-- 875936 --><!-- #EB2573 -->
   <title>Liora Herbals | Natural Beauty Products Without Chemicals</title>
 
   <meta name="description" content="Liora Herbals offers chemical-free beauty products like herbal hair oil, lip balm, and lipstick—crafted with botanical ingredients for pure and radiant self-care.">
@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display&display=swap" rel="stylesheet">
   <!-- CSS file -->
   <!-- <link rel="stylesheet" href="styles.css"> -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZIC9A_S6lz-u8QV0Mx7fvDLmkf_75m8g&libraries=places"></script>
@@ -36,9 +36,11 @@
     }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #000; 
-      color: #fff;
+      /*font-family: 'Segoe UI', sans-serif;*/
+	  font-family: "Noto Serif Display", serif;
+      background-color: #fff; 
+      color: #000;
+	  font-weight: 600;
     }
 
     .main-wrapper {
@@ -94,7 +96,6 @@
       margin-top: 10px;
       font-size: 1.2rem;
       text-align: center;
-      color: #fff;
     }
 
     @media (max-width: 768px) {
@@ -119,7 +120,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #000;
   padding: 10px 20px;
   flex-wrap: wrap;
 }
@@ -127,7 +127,7 @@
 .logo {
   display: flex;
   align-items: center; /* vertically center the items */
-  gap: 12px; /* adds space between image and heading */
+ /* gap: 12px;  adds space between image and heading */
 }
 
 .logo img {
@@ -140,9 +140,9 @@
 }
 
 .logo h1 {
-  font-size: 3.0rem;
+  font-size: 2.5rem;
   margin: 0;
-  color: #A58A33;
+  color: #EB2573;
 }
 
 
@@ -152,7 +152,7 @@
 }
 
 .nav-menu a {
-  color: #fff;
+  color: #EB2573;
   text-decoration: none;
   font-size: 16px;
   padding: 6px 10px;
@@ -161,15 +161,15 @@
 
 
 .nav-menu a:hover {
-  background-color: #A58A33;
   border-radius: 4px;
+  color: #000;
 }
 
 /* Mobile menu */
 .menu-toggle {
   display: none;
   font-size: 28px;
-  color: #fff;
+  color: #EB2573;
   cursor: pointer;
 }
 
@@ -195,8 +195,6 @@
 
 
 .site-footer {
-  background-color: #000; 
-  color: #fff;
   padding: 20px;
   text-align: center;
   border-top: 1px solid #333;
@@ -210,19 +208,17 @@
 }
 
 .footer-links a {
-  color: #fff;
   text-decoration: none;
   font-size: 0.95rem;
   transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: #A58A33;
+  color: #EB2573;
 }
 
 .footer-copy {
   font-size: 0.8rem;
-  color: #fff;
 }
 
 @media (min-width: 768px) {
@@ -238,17 +234,15 @@
 }
 .description h3 {
   font-size: 20px;
-  font-weight: bold;
-  color: #fff; 
+  font-weight: bold;  
   margin-top: 10px;
   margin-bottom: 5px;
+  color: #EB2573;
 }
 
 .description a {
   display: inline-block;
   padding: 8px 16px;
-  background-color: #000; 
-  color: #fff;
   text-decoration: none;
   border-radius: 6px;
   font-weight: 600;
@@ -256,19 +250,17 @@
 }
 
 .description a:hover {
-  background-color: #A58A33;
+  background-color: #EB2573;
 }
 .testimonials {
   padding: 40px 20px;
-  background-color: #000; 
-  color: #fff;
   text-align: center;
 }
 
 .testimonials h2 {
   font-size: 28px;
   margin-bottom: 30px;
-  color: #A58A33;
+  color: #EB2573;
 }
 
 .testimonial-row {
@@ -279,7 +271,6 @@
 }
 
 .testimonial-card {
-  background-color: #000; 
   border: 1px solid #e0d8ce;
   border-radius: 10px;
   padding: 20px;
@@ -294,15 +285,13 @@
 
 .how-to-use {
   padding: 40px 20px;
-  background-color: #000; 
- color: #fff;
   text-align: center;
 }
 
 .how-to-use h2 {
   font-size: 28px;
   margin-bottom: 30px;
-  color: #A58A33;
+  color: #EB2573;
 }
 
 .use-row {
@@ -313,7 +302,6 @@
 }
 
 .use-card {
-  background-color:#000; 
   border: 1px solid #e3dacb;
   border-radius: 10px;
   padding: 20px;
@@ -328,7 +316,7 @@
 }
 
 .use-card h3 {
-  color: #fff;
+  color: #EB2573;
   font-size: 22px;
   margin-bottom: 15px;
 }
@@ -340,7 +328,6 @@
 }
 
 .contact-us {
-  background-color:#000; 
   width: 100%;
 }
 
@@ -351,7 +338,6 @@
   flex-direction: column;
   gap: 15px;
   padding: 20px;
-  background-color: #000;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
@@ -365,29 +351,27 @@
 }
 
 .contact-us button {
-  background-color: #28a745;
-  color: #fff;
   border: none;
   padding: 12px;
   border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
   transition: background 0.3s;
+  background-color: #28a745;
+  color: #fff;
 }
 
 .contact-us button:hover {
-  background-color: #A58A33;
+  background-color: #EB2573;
 }
 .contact-us h2 {
-text-align: center;
+  text-align: center;
   font-size: 28px;
   margin-bottom: 30px;
-  color: #A58A33;
+  color: #EB2573;
 }
 .policy-section {
   padding: 40px 20px;
-  background-color: #000; 
-  color: #fff;
   max-width: 800px;
   margin: auto;
   text-align: left;
@@ -396,23 +380,21 @@ text-align: center;
 
 .policy-section h2 {
   font-size: 26px;
-  color: #A58A33;
+  color: #EB2573;
   margin-top: 30px;
   margin-bottom: 10px;
+  color: #EB2573;
 }
 
 .policy-section p {
   font-size: 16px;
-  background-color: #000; 
   padding: 20px;
   border: 1px solid #e3dacb;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 .about-us {
-  background-color: #000; 
   padding: 40px 25px;
-  color: #fff;
   max-width: 800px;
   margin: auto;
   border-radius: 12px;
@@ -422,35 +404,33 @@ text-align: center;
 
 .about-us h2 {
   font-size: 32px;
-  color: #A58A33;
+  color: #EB2573;
   margin-bottom: 25px;
   text-align: center;
+  color: #EB2573;
 }
 
 .about-us p {
   font-size: 17px;
   line-height: 1.8;
   margin-bottom: 18px;
-  background-color: #000; 
   padding: 15px 20px;
-  border-left: 5px solid #A58A33;
+  border-left: 5px solid #EB2573;
   border-radius: 8px;
 }
 .description {
-  background-color: #000; 
   padding: 30px;
   border-radius: 10px;
   max-width: 500px;
   margin: auto;
-  color: #fff;
 }
 
 .description h2 {
-  color: #A58A33;
+  color: #EB2573;
 }
 
 .description h3 {
-  color: #A58A33;
+  color: #EB2573;
   margin-bottom: 10px;
 }
 
@@ -485,7 +465,7 @@ text-align: center;
 }
 
 .description button:hover {
-  background-color: #A58A33;
+  background-color: #EB2573;
 }
 .modal-overlay {
   display: none;
@@ -493,25 +473,24 @@ text-align: center;
   z-index: 999;
   left: 0; top: 0;
   width: 100%; height: 100%;
-  background-color: #000; 
   justify-content: center;
   align-items: center;
+  background-color: #000;
+  color:#fff;
 }
 
 .modal-content {
-  background-color: #000; 
   padding: 30px;
   border-radius: 12px;
   width: 90%;
   max-width: 400px;
   text-align: center;
-  color: #fff;
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
   position: relative;
 }
 
 .modal-content h2 {
-  color: #A58A33;
+  color: #EB2573;
   margin-bottom: 20px;
 }
 
@@ -542,7 +521,7 @@ text-align: center;
 }
 
 .modal-content button:hover {
-  background-color: #A58A33;
+  background-color: #EB2573;
 }
 
 .close-btn {
@@ -608,7 +587,7 @@ text-align: center;
 <header class="site-header">
   <div class="logo">
     <!-- <img src="https://placehold.co/120x40/000/fff?text=Liora" alt="Liora"> -->
-	<img src="logo.jpg" alt="Liora"> <h1>LIORA HERBALS</h1>
+	<img src="pinklogo-tr.png" alt="Liora"><h1>IORA HERBALS</h1>
   </div>
   <nav class="nav-menu" id="navMenu">
     <a href="/">Products</a>
@@ -624,12 +603,7 @@ text-align: center;
   <div class="slide-set" id="set3">
     <!-- <img class="carousel-image" src="https://placehold.co/600x400/444/fff?text=Liora" alt="Slide 4" id="img3" /> -->
 	<img class="carousel-image" src="banner3000x1000.png" alt="Slide 4" id="img3" />
-    <div class="thumbnails">
-      <!-- <img src="https://placehold.co/100x100/444/fff?text=4A" onclick="changeImage(3, 'https://placehold.co/600x400/444/fff?text=Slide+4A')" />
-      <img src="https://placehold.co/100x100/444/fff?text=4B" onclick="changeImage(3, 'https://placehold.co/600x400/444/fff?text=Slide+4B')" /> -->
-	  <img src="banner.png" onclick="changeImage(3, 'banner3000x1000.png')" />
-	  <img src="banner-2.png" onclick="changeImage(3, 'banner-2-3000x1000.png')" />
-    </div>
+    
     <!-- <div class="description" id="desc3"><h1>LIORA HERBALS</h1>At Liora Herbals, we believe beauty begins with purity. Our products are lovingly crafted with nature’s finest ingredients—no chemicals, no compromise. Inspired by traditional remedies and modern self-care rituals, we offer plant-powered solutions that nurture your skin and hair without harsh additives.<br/>Whether it’s our nourishing hair oil, hydrating lip balm, or radiant lipstick, each item is infused with natural extracts and soothing botanicals. Every formula is designed to be gentle, effective, and emotionally uplifting—because we believe beauty should feel as good as it looks.<br/>Rooted in care, blossoming with integrity—Liora Herbals is where nature embraces you</div> -->
   </div>
 <div class="main-wrapper">
